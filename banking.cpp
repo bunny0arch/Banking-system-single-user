@@ -18,8 +18,8 @@ int main()
 	printf("\nEnter your security pin: ");
 	scanf("%d",&apin);
 	printf("\n\nAccount Created!");
-	int choice;
-	for(int a=1;a>0;a++)
+	int choice,a;
+	for(a=1;a>0;a++)
 	{
 		printf("\n\nINPUT GUIDES");
 		printf("\n1 to withdraw, 2 to deposit, 3 to check balance, 4 to view account details, 5 to change PIN, 6 to change account details, 7 to terminate program: ");
@@ -29,7 +29,7 @@ int main()
 					printf("\nTerminating the Program!");
 					break;
 				}
-				if(choice>7&&choice<0)
+				if(choice>7||choice<1)
 				{
 					printf("\nInvalid Choice! Choose from 1 to 7");
 				}
@@ -51,7 +51,7 @@ int main()
 						{
 							printf("\nTransactional Issue, Insufficient funds available!\n");
 							printf("\nAdd more funds to proceed");
-							printf("\nAvailable Balance is: %d",balance);
+							printf("\nAvailable Balance is: %.1f",balance);
 						}
 						else
 						{
